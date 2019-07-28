@@ -23,14 +23,21 @@ defmodule Cards do
   end
 
   @doc """
-  Searches a deck for a card, and returns `true` if the card is present, or `fasle` if it is not.
-"""
+  Determines whether a specific card is in a deck.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Queen of Hearts")
+      true
+
+  """
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
 
   @doc """
-  Divides a deck into a hand and the remainder of the deck. The `hand_size` aregument indicates how many cards should be in the hand.
+  Divides a deck into a hand and the remainder of the deck. The `hand_size` argument indicates how many cards should be in the hand.
 
   ## Examples
 
